@@ -3,6 +3,10 @@ import { createMemoryHistory, createRouter, createWebHashHistory, RouteRecordRaw
 const constantRoutes: Array<RouteRecordRaw> = [
     {
         path: '/',
+        redirect: '/home',
+    },
+    {
+        path: '/',
         name: 'layou',
         component: () => import(/* webpackChunkName: "home" */'../views/layou/layou.vue'),
         children: [
